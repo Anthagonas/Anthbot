@@ -72,9 +72,6 @@ def cmp(a, b): #Compare two messages to see if equals
 		
 	
 hi_mode = False;
-spam_mode = False;
-messcount = 1;
-prevMessage = "";
 Pass = cfg.PASS;
 Nick = cfg.NICK;
 account_nb = input("1 : Antha | 2 : bot1 :\n");
@@ -131,20 +128,3 @@ while True:
 			if ("closing in TWO minutes, get your entries in by typing !enter if you have not already entered.") in message and username == "cohhilitionbot" :			
 				print "\n\nentering cohh giveaway\n\n";
 				chat(s,"!enter\r\n");
-				
-		#Spam mode		
-			if ("!spam") in message.lower() and username == "anthagonas":
-				if spam_mode :
-					spam_mode = False;
-					print "\n\nSPAM OFF\n\n";
-				else :
-					spam_mode = True;
-			if spam_mode :
-				if cmp(message.lower(),prevMessage.lower()):
-					messcount = messcount +1;
-					if messcount == cfg.SPAM_TRESHOLD and prevMessage != "\r\n" and "!enter" not in message:
-						chat(s,prevMessage);
-						messcount = 1;
-				else :
-					messcount = 1;
-					prevMessage = message;

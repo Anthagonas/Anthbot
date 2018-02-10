@@ -7,4 +7,3 @@ NICK2 = "melikespam"
 PASS = ""                       # your twitch Oauth
 PASS1 = ""
 PASS2 = ""
-SPAM_TRESHOLD = 4                       # nb of identical message before you spam 
