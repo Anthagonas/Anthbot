@@ -82,7 +82,6 @@ elif account_nb == 2 :
 	Nick = cfg.NICK1;
 chan = "#";
 chan = chan + raw_input("Channel a rejoindre :");
-cfg.CHAN = chan;
 startTime = time.time();
 lines = 0;
 s = socket.socket();
@@ -128,3 +127,7 @@ while True:
 			if ("closing in TWO minutes, get your entries in by typing !enter if you have not already entered.") in message and username == "cohhilitionbot" :			
 				print "\n\nentering cohh giveaway\n\n";
 				chat(s,"!enter\r\n");
+			
+		#Scaythly NepSmug
+			if message == "nepSmug" and username.lower() == "scaythly":
+				chat(s,'nepSmug nepSmug');
